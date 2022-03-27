@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Pokemon_UML">
+  <ClassDiagramComponents>
+    <Class name="Thread" package="" visibility="public" xPosition="108.0" yPosition="450.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="State" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getState" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pokémon" package="" visibility="public" xPosition="382.0" yPosition="412.0">
+      <Fields>
+        <Field name="level" type="int" visibility="private"/>
+        <Field name="health" type="int" visibility="private"/>
+        <Field name="clase" type="String" visibility="private"/>
+        <Field name="strength" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getLevel" returnType="int" visibility="public"/>
+        <Method name="getHealth" returnType="int" visibility="public"/>
+        <Method name="getClase" returnType="String" visibility="public"/>
+        <Method name="realizarActividad" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Pelea" package="" visibility="public" xPosition="266.0" yPosition="202.0">
+      <Methods>
+        <Method name="getStrength" returnType="void" visibility="public"/>
+        <Method name="setLevel" returnType="void" visibility="public"/>
+        <Method name="setHealth" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Hospital" package="" visibility="public" xPosition="499.0" yPosition="202.0">
+      <Methods>
+        <Method name="getHealth" returnType="int" visibility="public"/>
+        <Method name="setHealth" returnType="void" visibility="public"/>
+        <Method name="revisarAtributos" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Pokémon" target="Pelea"/>
+    <IsRelation name="is" source="Pokémon" target="Thread"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Pokémon" target="Hospital"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
